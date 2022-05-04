@@ -1,26 +1,26 @@
 ## JEAN MAIRON MODESTO - DESAFIO DEVOPS ## 
-- O desafio foi feito com as liguagens HCL - Terraform
+- O desafio foi feito com as linguagens HCL - Terraform
 - A plataforma utilizada foi a Microsoft Azure
 - Utilizando Docker container para hospedagem da aplicação e menor custo
 - Python && Flask && Ubuntu
-- Docker hub - hospedagem de imagem docker
+- Docker hub - hospedagem de imagem Docker
 
 ## Passos seguidos para configuração do Docker utilizado no teste:
 1 - Realizado um Docker Pull Image - UBUNTU
-2 - Realizado a instalação de Python e suas dependencias
+2 - Realizado a instalação de Python e suas dependências
 3 - Instalação de ambientes virtuais do Python
-4 - Instalacao de nginx 
+4 - Instalação de nginx 
 5 - Download do projeto enviado
 
 ## Projeto teste no Provider Azure e utilizado Terraform para automatização basica.
-a baixo estarei adicionando os comandos utilizados para compilar o projeto
-e necessário ter o terraform instalado na máquina ou criar uma maquina
+abaixo adicionarei os comandos utilizados para compilar o projeto
+e necessário ter o terraform instalado na máquina ou criar uma máquina
 virtual e instalar o terraform.
 - Projeto terraform: https://learn.hashicorp.com/
 - Demonstra onde pode ser usado o terraform: https://learn.hashicorp.com/terraform
 - Tutorial de utilização da ferramenta da AZURE: https://learn.hashicorp.com/collections/terraform/azure-get-started
 - Formas de instalação do terraform: https://www.terraform.io/downloads
--- Nesta pagina pode escolher qual ambiente ira utilizar - Linux - Windows - Mac
+-- Nesta página pode escolher qual ambiente irá utilizar - Linux - Windows - Mac
 - Provider's principais - AWS - AZURE - GCP
 
 ## Iniciando Instalações && Melhorias.
@@ -35,7 +35,7 @@ virtual e instalar o terraform.
 -- Podemos utilizar a Azure Devops como Melhorias
 
  Monitoramento dos serviços e métricas da aplicação
--- Podemos utilizar as metricas da propria Azure
+-- Podemos utilizar as metricas da própria Azure
 -- Como melhorias podemos instalar Grafana / Kibana - dependendo da aplicação
 
  Use ferramentas e bibliotecas open source, mas documente as decisões e porquês;
@@ -46,7 +46,7 @@ Já possuimos um projeto pronto para reutilizar a instalação até de outras do
 ## Automatize o máximo possível;
 -- Para melhoria da automatização podemos melhorar na criação do Dockerfile
 -- Push das imagens geradas
--- login automaticos no Provider escolhido.
+-- login automáticos no Provider escolhido.
 -- Diminuição de interação com o Painel do Provider escolhido aumentando a segurança
 
 ## Distribuição do Projeto
@@ -57,27 +57,27 @@ Azure -> Projeto criado com Terraform, que realiza toda a entrada e criação do
 ## Como executar o projeto
 
 ## Realizar o clone do Projeto
-Dentro do diretório apos instalação do terraform iniciaremos as instalações
+Dentro do diretório após instalação do terraform iniciaremos as instalações
 Faz se necessário ter uma conta no Portal da Azure.
 Caso não tenha precisaremos adequar o codigo para outros Provider "AWS - GCP"
 
-## Dentro do Pasta do Projeto vamos inciar as instalações
+## Dentro do Pasta do Projeto vamos iniciar as instalações
 # Realizar o login na Provider Azure
 
 $ Entrar no diretório /Azure
 $ az login 
 
-# Item a baixo para iniciar o projeto
+# Item abaixo para iniciar o projeto
 $ terraform init
 
-# Item para correção e validação do codigo
+# Item para correção e validação do código
 $ terraform fmt
 $ terraform validate
 
 # Item para planejar o que será criado, você terá uma amostra do que será executado.
 $ terraform plan -var-file=vars/dev.tfvars
 
-# Item para implatação do Projeto 
+# Item para implantação do Projeto 
 $ terraform apply -var-file=vars/dev.tfvars
 
 Aguadar o projeto finalizar.
@@ -103,10 +103,10 @@ curl -sv modestotec.azurewebsites.net/api/comment/list/1
 curl -sv modestotec.azurewebsites.net/api/comment/list/2
 ```
 
-## Caso ocorra problemas nos teste como o a baixo mencionado, fineza reinicia o WEBAPP que foi criado.
+## Caso ocorra problemas nos testes como o a baixo mencionado, fineza reinicia o WEBAPP que foi criado.
 e um erro gerado pela própria Azure
 
-# Exemplo de erro a baixo.
+# Exemplo de erro abaixo.
 
 curl -sv modestotec.azurewebsites.net/api/comment/new -X POST -H 'Content-Type: application/json' -d '{"email":"alice@example.com","comment":"first post!","content_id":1}'
 *   Trying 191.235.228.35:80...
@@ -121,16 +121,14 @@ curl -sv modestotec.azurewebsites.net/api/comment/new -X POST -H 'Content-Type: 
 > 
 * upload completely sent off: 68 out of 68 bytes
 
-
 * Mark bundle as not supporting multiuse
 < HTTP/1.1 503 Service Temporarily Unavailable
 < Content-Length: 384
 < Server: nginx
 < Date: Tue, 03 May 2022 21:06:17 GMT
 < 
-<div style="display: block; margin: auto;  width: 600px; height: 500px; text-align: center; font-family: 'Courier', cursive, sans-serif;"><h1 style="color: 747474">:( Application Error</h1><p style="color:#666">If you are the application administrator, you can access the <a style="color: grey"href="https://modestotec.scm.azurewebsites.net/detectors">diagnostic resources</a>.</div>
+<div style="display: block; margin: auto; width: 600px; height: 500px; text-align: center; font-family: 'Courier', cursive, sans-serif;"><h1 style="color: 747474">:( Application Error</h1><p style="color:#666">If you are the application administrator, you can access the <a style="color: grey"href="https://modestotec.scm.azurewebsites.net/detectors">diagnostic resources</a>.</div>
 * Connection #0 to host modestotec.azurewebsites.net left intact
-
 
 ## Execução local.
 Caso tenha a intenção de executar local segue os passos:
@@ -152,4 +150,4 @@ $ docker run --name mairon01 -p 80:8080 jmairon/desafio_devops:1.2
 [2022-05-04 00:33:50 +0000] [10] [INFO] Booting worker with pid: 10
 [2022-05-04 00:33:50 +0000] [11] [INFO] Booting worker with pid: 11
 
-# Agora já pode realizar o testes.
+# Agora já pode realizar os testes.
