@@ -25,20 +25,20 @@ virtual e instalar o terraform.
 
 ## Iniciando Instalações && Melhorias.
 
-## Automação da infra, provisionamento dos hosts (IaaS)
+ Automação da infra, provisionamento dos hosts (IaaS)
 -- MICROSOFT AZURE
 
-## Automação de setup e configuração dos hosts (IaC)
+ Automação de setup e configuração dos hosts (IaC)
 -- Terraform
 
-## Pipeline de deploy automatizado
+ Pipeline de deploy automatizado
 -- Podemos utilizar a Azure Devops como Melhorias
 
-## Monitoramento dos serviços e métricas da aplicação
+ Monitoramento dos serviços e métricas da aplicação
 -- Podemos utilizar as metricas da propria Azure
 -- Como melhorias podemos instalar Grafana / Kibana - dependendo da aplicação
 
-## Use ferramentas e bibliotecas open source, mas documente as decisões e porquês;
+ Use ferramentas e bibliotecas open source, mas documente as decisões e porquês;
 -- Nesse caso a escolha foi utilizar o terraform para instalação do projeto e automatização
 para que nao necessite mais de repetir ou criar o mesmo codigo para qualquer outro teste.
 Já possuimos um projeto pronto para reutilizar a instalação até de outras docker.
@@ -63,6 +63,8 @@ Caso não tenha precisaremos adequar o codigo para outros Provider "AWS - GCP"
 
 ## Dentro do Pasta do Projeto vamos inciar as instalações
 # Realizar o login na Provider Azure
+
+$ Entrar no diretório /Azure
 $ az login 
 
 # Item a baixo para iniciar o projeto
