@@ -1,0 +1,7 @@
+location    = "brazil south"
+name        = "modestotecdev"
+tipo        = "RSG"
+Environment = "DEV"
+Company     = "jmm"
+Department  = "TI TESTE"
+Project     = "EVOLUTION"
